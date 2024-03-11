@@ -26,7 +26,7 @@ ynh_script_progression --message="Reinstalling Netdata..." --weight=18
 
 # Download, check integrity, uncompress and patch the source from app.src
 NETDATA_TMPDIR=$(mktemp -d)
-ynh_setup_source --dest_dir="$NETDATA_TMPDIR"
+ynh_setup_source --dest_dir="$NETDATA_TMPDIR" --full_replace=1
 
 # create a temporary file for the log
 tmplog=$(mktemp /tmp/netdata-updater-log-XXXXXX.log)

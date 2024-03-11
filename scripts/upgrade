@@ -20,7 +20,7 @@ ynh_script_progression --message="Upgrading source files..." --weight=18
 
 # Download, check integrity, uncompress and patch the source from app.src
 NETDATA_TMPDIR=$(mktemp -d)
-ynh_setup_source "$NETDATA_TMPDIR"
+ynh_setup_source "$NETDATA_TMPDIR" --full_replace=1
 
 #=================================================
 # SPECIFIC UPGRADE
